@@ -377,7 +377,7 @@
           const blob = uriToBlob(uri);
           const url = URL.createObjectURL(blob);
           saveLink.href = url;
-          saveLink.onclick = () => requestAnimationFrame(() => URL.revokeObjectURL(url));
+          saveLink.onclick = () => requestAnimationFrame();
         } catch (e) {
           console.error(e);
           console.warn('Error while getting object URL. Falling back to string URL.');
